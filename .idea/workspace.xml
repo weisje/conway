@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f9a931-379c-480e-90b4-fa5aeb39fbcd" name="Changes" comment="Created main() function. Defined board dimensions. Randomly applied cell states to the board &amp; stored them as list of lists.  Printed initial board state to screen.">
+    <list default="true" id="f5f9a931-379c-480e-90b4-fa5aeb39fbcd" name="Changes" comment="Calculated next step's cell based on current step's cell.  Set cell based on rules for Conway's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conway.py" beforeDir="false" afterPath="$PROJECT_DIR$/conway.py" afterDir="false" />
     </list>
@@ -35,11 +35,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.conway.executor": "Run",
+    "Python.scratch_15.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.conway">
     <configuration name="conway" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conway" />
       <option name="ENV_FILES" value="" />
@@ -62,9 +68,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_15" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conway" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.conway" />
+        <item itemvalue="Python.scratch_15" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718275353183</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Calculated next step's cell based on current step's cell.  Set cell based on rules for Conway's">
+      <option name="closed" value="true" />
+      <created>1718277016040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718277016040</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Created main() function. Defined board dimensions. Randomly applied cell states to the board &amp; stored them as list of lists.  Printed initial board state to screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created main() function. Defined board dimensions. Randomly applied cell states to the board &amp; stored them as list of lists.  Printed initial board state to screen." />
+    <MESSAGE value="Calculated next step's cell based on current step's cell.  Set cell based on rules for Conway's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculated next step's cell based on current step's cell.  Set cell based on rules for Conway's" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 # IMPORT BLOCK BEGIN
 import copy
+import os
 import random
 import time
 
@@ -7,11 +8,20 @@ import time
 
 
 # FUNCTION BLOCK BEGIN
+def osFinder():
+    if os.name == 'nt':
+        return 'cls'
+    else:
+        return 'clear'
+
+
 def main():
     WIDTH = 60
     HEIGHT = 20
     LIVINGCELL = "#"
     DEADCELL = " "
+    REFRESHRATE = 1 # Time, in seconds, the screen should wait before refreshing
+    clearCommand = osFinder()
 
     # Create a list of lists for the cells
     nextCells = []
@@ -26,6 +36,7 @@ def main():
         nextCells.append(column) # Append the cells to the board after they have been populated
 
     while True:
+        os.system(clearCommand)
         print("\n\n\n\n\n") # Separate each step with newlines
         currentCells = copy.deepcopy(nextCells) # Grab the current board set as a new, separate instance
 
@@ -46,8 +57,6 @@ def main():
 
                 # Count the number of living neighbors
                 numNeighbors = 0
-
-                # CLEANUP: Figure out a way to better organize this block; the iteration of the IFs feels chunky
                 if currentCells[leftCoord][aboveCoord] == LIVINGCELL:
                     numNeighbors += 1 # Top left neighbor is alive
                 if currentCells[xCoord][aboveCoord] == LIVINGCELL:
@@ -72,7 +81,7 @@ def main():
                     nextCells[xCoord][yCoord] = LIVINGCELL # Dead cells with exactly 3 neighbors becomes alive ('Thrive')
                 else:
                     nextCells[xCoord][yCoord] = DEADCELL # All other situations lead to a cell dying ('Die')
-        time.sleep(1)
+        time.sleep(REFRESHRATE)
 # FUNCTION BLOCK END
 
 
